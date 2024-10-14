@@ -137,7 +137,8 @@ public class MovieController {
 			return "edit-movie";
 		}
 		dao.save(m);
-		return "redirect:/movie/" + m.getId();
+		return "redirect:/app";
+		//return "redirect:/movie/" + m.getId();
 	}
 
 }

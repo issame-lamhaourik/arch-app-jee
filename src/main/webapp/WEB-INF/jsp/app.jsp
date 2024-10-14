@@ -15,10 +15,6 @@
         <p>counter = {{step}}</p>
         <p> <button v-on:click="incCounter(0)">Plus deux</button></p>
 
-<!--
-        <p>movies = <span v-for="element in movies">{{ element }} -
-		</span></p>
--->
 
         <h2>Liste des films</h2>
         <table class="table">
@@ -34,8 +30,11 @@
                     <td>{{ movie.name }}</td>
                     <td>{{ movie.year }}</td>
                     <td>
-                        <button class="btn btn-danger btn-sm" @click="deleteMovie(movie.id)">Supprimer</button>
+                        <button class="btn btn-danger btn-sm" v-on:click="deleteMovie(index)">Supprimer</button>
                     </td>
+                    <td><a class="btn btn-primary btn-sm" v-on:click="showMovie(index)">Montrer</a></td>
+                    <td><button class="btn btn-primary btn-sm" v-on:click="editMovie(index)">Editer</button></td>              </tr>
+
                 </tr>
             </tbody>
         </table>

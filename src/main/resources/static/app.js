@@ -44,13 +44,23 @@ const myApp = {
                     this.movies = r.data;
                 })
         },
-        deleteMovie: function(){
-            this.axios.delete('/movies/{id}')
+        deleteMovie: function(index){
+            const id = this.movies[index].id;
+            this.axios.delete(`/movies/${id}`)
             .then(r => {
                 this.displayMovie();
             })
-        }
-
+        },
+        showMovie: function(index){
+            const id = this.movies[index].id;
+            this.axios.get(`/movies/${id}`)
+            .then(response => {response.data;
+            })
+        },
+        editMovie: function(index) {
+            const id = this.movies[index].id;
+            window.location.href = `/edit-movie/${id}`
+        },
     }
 }
 
