@@ -12,6 +12,7 @@ import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.util.UrlPathHelper;
 
@@ -58,6 +59,11 @@ public class SpringConfiguration extends SpringBootServletInitializer implements
 		// Nous gardons le contenu après le point virgule
 		urlPathHelper.setRemoveSemicolonContent(false);
 		configurer.setUrlPathHelper(urlPathHelper);
+	}
+
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/app").setViewName("app");
 	}
 
 }

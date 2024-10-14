@@ -7,12 +7,12 @@
 	value="/webjars/bootstrap/5.3.3/css/bootstrap.min.css" />
 <c:url var="bootstrap_js"
 	value="/webjars/bootstrap/5.3.3/js/bootstrap.min.js" />
-<c:url var="vue_js"
-	value="/webjars/vue/3.3.4/dist/vue.global.js" />
-<c:url var="axios_js"
-	value="/webjars/axios/0.22.0/dist/axios.min.js" />
+<c:url var="vue_js" value="/webjars/vue/3.4.38/dist/vue.global.js" />
+<c:url var="axios_js" value="/webjars/axios/1.7.7/dist/axios.min.js" />
 <c:url var="css"
 	value="/style.css" />
+
+
 
 <html>
 	<head>
