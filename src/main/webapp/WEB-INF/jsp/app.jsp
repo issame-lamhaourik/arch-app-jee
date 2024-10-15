@@ -15,7 +15,6 @@
         <p>counter = {{step}}</p>
         <p> <button v-on:click="incCounter(0)">Plus deux</button></p>
 
-
         <h2>Liste des films</h2>
         <table class="table">
             <thead>
@@ -33,11 +32,15 @@
                         <button class="btn btn-danger btn-sm" v-on:click="deleteMovie(index)">Supprimer</button>
                     </td>
                     <td><a class="btn btn-primary btn-sm" v-on:click="showMovie(index)">Montrer</a></td>
-                    <td><button class="btn btn-primary btn-sm" v-on:click="editMovie(index)">Editer</button></td>              </tr>
-
+                    <td><button class="btn btn-primary btn-sm" v-on:click="editMovie(index)">Editer</button></td>
                 </tr>
             </tbody>
         </table>
+        <!--
+         <message text="Une info" clazz="alert alert-primary"></message>
+        <message text="Une alerte" clazz="alert alert-warning"></message>
+        <message ref="info" text="Compteur" clazz="alert alert-primary"></message>
+        -->
 </div>
 
 <script src="${app}"></script>

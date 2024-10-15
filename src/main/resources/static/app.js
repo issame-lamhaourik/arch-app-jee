@@ -1,4 +1,11 @@
+//import Message from './message.js';
 const myApp = {
+    /*
+    components: {
+        "counter-component": Counter,
+    },
+
+     */
 
     // Préparation des données
     data() {
@@ -31,6 +38,8 @@ const myApp = {
             console.log("incremente le compteur ");
             this.counter++;
             this.step = this.step + 2;
+            this.$refs.info.change(`Compteur : ${this.counter}`);
+
             this.axios.get('/movies/1')
                 .then(r => {
                     console.log("read movie 1 done");
@@ -65,3 +74,6 @@ const myApp = {
 }
 
 Vue.createApp(myApp).mount('#myApp');
+//const app = Vue.createApp(myApp);
+//app.component('Message', Message);
+//app.mount('#myApp');
