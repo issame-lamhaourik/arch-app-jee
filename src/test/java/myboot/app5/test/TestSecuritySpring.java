@@ -35,4 +35,5 @@ public class TestSecuritySpring {
         assertEquals(HttpStatus.OK, meResponse.getStatusCode());
         System.out.println("User Info: " + meResponse.getBody());
     }
+    //test
 }
